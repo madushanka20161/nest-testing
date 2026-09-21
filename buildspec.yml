@@ -12,11 +12,10 @@ phases:
     commands:
       - echo "Building NestJS app..."
       - npm run build
-      - echo "web: node dist/main.js" > Procfile
 
 artifacts:
   files:
-    - dist/**/*
+    - 'dist/**/*'
     - package.json
     - package-lock.json
     - Procfile
