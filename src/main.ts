@@ -16,4 +16,7 @@ async function bootstrap() {
 
   console.log(`API running on port ${port}`);
 }
-bootstrap();
+bootstrap().catch((error: unknown) => {
+  console.error('Failed to start application:', error);
+  process.exit(1);
+});
